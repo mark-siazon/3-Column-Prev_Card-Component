@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+  /* # Front-end Style Guide */
+  /* ## Layout (The designs were created to the following widths:) */
+  --mobile: 375px;
+  --desktop: 1440px;
+  --font-size: 15px;
+
+  /* ### Colors: Primary */
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --vDarkCyan: hsl(179, 100%, 13%);
+  
+  /* ### Colors: Neutral */
+  --transparentWhite: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+  --vLightGray : hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+
+  /* ### Font */
+  --font-pri: 'Lexend Deca'; /* Weights: 400 */
+  --font-sec: 'Big Shoulders Display'; /* Weights: 700 */
+}
+
+body{
+  display: flex;
+  min-height: 100vh;
+
+  justify-content: center;
+  align-content: center;
+  
+  color: var(--transparentWhite);
+  background-color: var(--vLightGray);
+  font-size: var(--font-size);
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+  width: 375px;
+}
+
+div>section{
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 7.5vw;
+}
+
+main>div{
+  /* border-radius: 50%; */
+}
+
+/***** General Styles *****/
+/* ## Card Icon */
+.card-icon{
+  
+}
+
+/* ## Card Title */
+
+.card-title{
+  text-transform: uppercase;
+  font-family: var(--font-sec);
+  color: var(--vLightGray);
+  font-size: 2.25rem;
+  margin: 1.25rem 0;
+}
+
+/* ## Card Info */
+.card-info, .btn{
+  font-family: var(--font-pri);
+}
+
+.card-info{
+  font-size: 0.9rem;
+  margin: 0;
+  padding-right:2.5rem;
+}
+
+/* ## Card Btn */
+.btn{
+  border: 3px solid var(--vLightGray);
+  padding: 1rem 2.25rem;
+  border-radius: 20px;
+  background-color: var(--vLightGray);
+
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.btn-ctn{
+  margin-top: 7.5vh;
+}
+
+section:nth-child(1) > div.btn-ctn > .btn{ color: var(--brightOrange); }
+section:nth-child(2) > div.btn-ctn > .btn{ color: var(--darkCyan); }
+section:nth-child(3) > div.btn-ctn > .btn{ color: var(--vDarkCyan); }
+
+.btn:hover, .btn:active{
+  color: #fff !important;
+  background-color: unset;
+  border: 3px solid var(--transparentWhite);
+  cursor: pointer;
+  
+
+}
+
+/***** CTN-1 *****/
+.ctn-1{
+  background-color: var(--brightOrange);
+}
+
+
+/***** CTN-2 *****/
+.ctn-2{
+  background-color: var(--darkCyan);
+}
+
+/***** CTN-3 *****/
+.ctn-3{
+  background-color: var(--vDarkCyan);
+}
