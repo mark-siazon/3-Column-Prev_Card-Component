@@ -21,45 +21,50 @@
   --font-sec: 'Big Shoulders Display'; /* Weights: 700 */
 }
 
-body{
-  display: flex;
-  min-height: 100vh;
+/***** Mixed Styles *****/
+body, .card-info{
+  margin: 0;
+}
 
-  justify-content: center;
-  align-content: center;
-  
-  color: var(--transparentWhite);
+body, main > div{
+  display: flex;
+}
+
+body, .btn{
   background-color: var(--vLightGray);
-  font-size: var(--font-size);
-}
-
-main{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-
-  width: 375px;
-}
-
-div>section{
-  display: flex;
-  flex-direction: column;
-  padding: 10vh 7.5vw;
-}
-
-main>div{
-  /* border-radius: 50%; */
 }
 
 /***** General Styles *****/
-/* ## Card Icon */
-.card-icon{
-  
+body{
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  color: var(--transparentWhite);
+  font-size: var(--font-size);
 }
 
-/* ## Card Title */
+a{
+  color: unset;
+  text-decoration: none;
+}
 
+main{
+  width: var(--mobile);
+  margin: 7.5vh 10vw; /* ADJUST: Margin of main-ctn */
+}
+
+main > div{
+  flex-direction: column; /* MOBILE: col || DESKTOP: row */
+}
+
+.main-ctn section{
+  padding: 3rem 2rem 3rem 2.5rem; /* ADJUST: Spacing of contents */
+}
+
+/***** Specific Styles *****/
+
+/* ## Card Title */
 .card-title{
   text-transform: uppercase;
   font-family: var(--font-sec);
@@ -75,51 +80,48 @@ main>div{
 
 .card-info{
   font-size: 0.9rem;
-  margin: 0;
-  padding-right:2.5rem;
+  line-height: 1.3rem;
+  padding-right: 2rem;
 }
 
 /* ## Card Btn */
 .btn{
   border: 3px solid var(--vLightGray);
-  padding: 1rem 2.25rem;
-  border-radius: 20px;
-  background-color: var(--vLightGray);
+  padding: 0.75rem 2.25rem;
+  border-radius: 30px;
 
+  box-sizing: border-box;         /* Opera/IE 8+ */
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 .btn-ctn{
-  margin-top: 7.5vh;
+  margin-top: 2.5rem;
 }
 
-section:nth-child(1) > div.btn-ctn > .btn{ color: var(--brightOrange); }
-section:nth-child(2) > div.btn-ctn > .btn{ color: var(--darkCyan); }
-section:nth-child(3) > div.btn-ctn > .btn{ color: var(--vDarkCyan); }
-
 .btn:hover, .btn:active{
-  color: #fff !important;
+  color: var(--transparentWhite) !important;
   background-color: unset;
   border: 3px solid var(--transparentWhite);
   cursor: pointer;
-  
-
 }
 
 /***** CTN-1 *****/
-.ctn-1{
-  background-color: var(--brightOrange);
-}
+.card-1-container{ background-color: var(--brightOrange); }
+section:nth-child(1) > div.btn-ctn > .btn{ color: var(--brightOrange); }
 
+.main-ctn section:nth-child(1){
+  border-radius: 15px 15px 0 0;
+}
 
 /***** CTN-2 *****/
-.ctn-2{
-  background-color: var(--darkCyan);
-}
+.card-2-container{ background-color: var(--darkCyan); }
+section:nth-child(2) > div.btn-ctn > .btn{ color: var(--darkCyan); }
 
 /***** CTN-3 *****/
-.ctn-3{
-  background-color: var(--vDarkCyan);
+.card-3-container{ background-color: var(--vDarkCyan); }
+section:nth-child(3) > div.btn-ctn > .btn{ color: var(--vDarkCyan); }
+
+.main-ctn section:nth-child(3){
+  border-radius: 0 0 15px 15px ;
 }

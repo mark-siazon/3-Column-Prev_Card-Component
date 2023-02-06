@@ -1,0 +1,6 @@
+/* Tablet & Up */
+@media screen and (min-width:768px) {
+  main{
+    flex-direction: row;
+  }
+}
